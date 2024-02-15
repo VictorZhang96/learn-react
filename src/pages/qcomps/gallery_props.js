@@ -1,3 +1,33 @@
+function Profile({person, size = 70}){
+  return (
+      <div>
+        <h2>{person.name}</h2>
+        <img className="avatar"
+             src = {"https://i.imgur.com/"  + ".jpg"}
+             alt = {person.name}
+             width = {size}
+             height = {size}
+        />
+        <ul>
+          <li>
+            <b>Profession: </b>
+            {person.profession}
+          </li>
+          <li>
+            <b>Awards: {person.awards} </b>
+            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+          </li>
+          <li>
+            <b>Discovered: </b>
+            polonium (element)
+          </li>
+        </ul>
+
+      </div>
+
+  )
+
+}
 export default function Gallery() {
   return (
     <div>
