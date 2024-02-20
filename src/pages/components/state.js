@@ -5,7 +5,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
+    setIndex(index + 1%12);
   }
 
   let sculpture = sculptureList[index];
@@ -19,7 +19,7 @@ export default function Gallery() {
         by {sculpture.artist}
       </h2>
       <h3>
-        ({index + 1} of {sculptureList.length})
+        ({index + 1%12} of {sculptureList.length})
       </h3>
       <img
         src={sculpture.url}
